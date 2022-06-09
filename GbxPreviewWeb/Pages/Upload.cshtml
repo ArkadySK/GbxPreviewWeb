@@ -1,0 +1,57 @@
+﻿@page
+@model GbxPreviewWeb.Pages.UploadModel
+@{
+	ViewData["Title"] = "Upload a map";
+}
+<div class="text-center">
+    <h2>Upload a map to see map info:</h2>
+   <form method="post" enctype="multipart/form-data">
+        <input type="file" asp-for="UploadMap" required />
+        <input type="submit" value="Upload Map"/>
+    </form>
+
+    <p1><br></p1>
+
+    @if (Model.Map is not null)
+    {
+    <h3>@Model.Map?.MapName</h3>
+    <p1>@Model.Map?.AuthorNickname </p1>
+    <p1>(@Model.Map?.AuthorLogin)<br></p1>
+
+    <img src="@Model.MapImageWebPath">
+
+   
+    <div class="row justify-content-center">
+        <div class="column4">
+            <img src="resources/medals/NadeoMedal.png"/>
+            <p1>@Model.Map?.TMObjective_AuthorTime</p1>
+        </div>
+        <div class="column4">
+            <img src="resources/medals/GoldMedal.png"/>
+            <p1>@Model.Map?.TMObjective_GoldTime</p1>
+        </div>
+        <div class="column4">
+            <img src="resources/medals/SilverMedal.png"/>
+            <p1>@Model.Map?.TMObjective_SilverTime</p1>
+        </div>
+        <div class="column4">
+            <img src="resources/medals/BronzeMedal.png"/>
+            <p1>@Model.Map?.TMObjective_BronzeTime</p1>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="column2 text-center">
+            <h4>Environment</h4>
+            <img src="resources/Environments/@Model.Map?.Collection
+.png"}/>
+        </div>
+        <div class="column2 text-center">
+            <h4>Mood</h4>
+            <img src="resources/MoodIcons/@Model.Map?.GetMapMood()
+.png"}/>
+        </div>
+    </div>
+    }
+
+</div>

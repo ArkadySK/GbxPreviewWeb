@@ -1,0 +1,44 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  background-color: white;
+  color: black;
+}
+
+.column4 {
+    float: inherit;
+    width: 25%;
+    max-width: 100px;
+}
+
+.column2 {
+    float: inline-end;
+    width: 50%;
+    max-width: 150px;
+    margin: 5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+h4 {
+    font-size: 18px;
+}

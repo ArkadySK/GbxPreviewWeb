@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="GBX.NET" Version="0.15.1" />
+    <PackageReference Include="GBX.NET.Imaging" Version="1.0.3" />
+    <PackageReference Include="GBX.NET.Json" Version="0.1.5" />
+    <PackageReference Include="GBX.NET.LZO" Version="1.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="uploads\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="wwwroot\resources\medals\BronzeMedal.dds">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\resources\medals\GoldMedal.dds">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\resources\medals\NadeoMedal.dds">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\resources\medals\SilverMedal.dds">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
